@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "id": "29aec685-df0f-8020-94a9-dca4eb163e0d",
+      "title": "漏洞攻击模式预测系统",
+      "description": "项目背景：\n该项目制作了一个\n项目内容：\n权威的\n结果：\n权威的千问",
+      "status": "completed",
+      "technologies": [
+        "Python",
+        "NLP",
+        "Flask",
+        "Vue"
+      ],
+      "highlights": [
+        "123",
+        "456"
+      ],
+      "githubUrl": "",
+      "demoUrl": "456",
+      "startDate": "2025-10-14",
+      "endDate": "2025-10-29"
+    }
+  ],
+  "lastUpdated": "2025-10-29T06:45:24.524Z",
+  "count": 1
+}

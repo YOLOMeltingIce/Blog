@@ -1,0 +1,495 @@
+==================================================
+个人博客项目 - 前端样式设计文档
+==================================================
+
+生成时间: 2025-10-28
+技术栈: Next.js 13 + Tailwind CSS v3 + TypeScript
+
+==================================================
+全局样式配置
+==================================================
+
+文件: src/app/globals.css
+---
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+==================================================
+布局组件 (Layout)
+==================================================
+
+文件: src/app/layout.tsx
+样式类名:
+- html: lang="zh-CN"
+- body: "antialiased bg-gray-50"
+- main: "min-h-screen"
+
+全局背景色: 浅灰色 (bg-gray-50)
+最小高度: 100vh
+
+==================================================
+导航栏组件 (Navigation)
+==================================================
+
+文件: src/components/Navigation.tsx
+
+容器样式:
+- "bg-white shadow-md sticky top-0 z-50"
+- 背景: 白色
+- 阴影: 中等
+- 固定定位: 顶部
+- z-index: 50
+
+内容区域:
+- "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+- 最大宽度: 7xl
+- 水平居中
+- 响应式内边距
+
+导航项容器:
+- "flex items-center justify-between h-16"
+- 弹性布局
+- 垂直居中
+- 两端对齐
+- 高度: 64px
+
+Logo/标题:
+- "text-2xl font-bold text-gray-900"
+- 字号: 2xl
+- 字重: 粗体
+- 颜色: 深灰
+
+桌面导航链接:
+- "hidden md:flex space-x-8"
+- 中等屏幕以上显示
+- 间距: 32px
+
+单个链接:
+- "text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+- 默认颜色: 灰色
+- 悬停颜色: 深灰
+- 内边距: 左右12px 上下8px
+- 字号: 小
+- 过渡效果: 颜色
+
+移动菜单按钮:
+- "md:hidden text-gray-700"
+- 小屏幕显示
+
+移动菜单:
+- "md:hidden bg-white border-t"
+- 小屏幕显示
+- 白色背景
+- 顶部边框
+
+移动链接:
+- "block px-4 py-3 text-gray-700 hover:bg-gray-100"
+- 块级显示
+- 内边距: 左右16px 上下12px
+- 悬停背景: 浅灰
+
+==================================================
+首页 (Home)
+==================================================
+
+文件: src/app/page.tsx
+
+主容器:
+- "max-w-4xl mx-auto px-4 py-8 bg-white shadow-sm rounded-lg mx-4 my-8"
+- 最大宽度: 4xl
+- 居中对齐
+- 内边距: 16px 32px
+- 背景: 白色
+- 阴影: 小
+- 圆角: 大
+- 外边距: 左右16px 上下32px
+
+个人简介区域:
+容器: "text-center mb-12"
+头像占位: "w-32 h-32 mx-auto mb-6 bg-gray-200 rounded-full flex items-center justify-center"
+  - 宽高: 128px
+  - 居中
+  - 圆形
+  - 灰色背景
+头像图标: "text-4xl text-gray-600"
+名字: "text-4xl font-bold text-gray-900 mb-4"
+职位: "text-xl text-gray-600 mb-6"
+简介: "text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed"
+
+技能专长区域:
+标题: "text-3xl font-bold text-gray-900 mb-8 text-center"
+网格容器: "grid grid-cols-2 md:grid-cols-4 gap-4"
+  - 2列 (移动端)
+  - 4列 (桌面端)
+  - 间距: 16px
+技能卡片: "bg-gray-100 rounded-lg p-4 text-center"
+技能名: "font-medium text-gray-800"
+
+兴趣爱好区域:
+网格: "grid grid-cols-1 md:grid-cols-3 gap-6"
+  - 1列 (移动端)
+  - 3列 (桌面端)
+卡片: "text-center p-6 bg-white rounded-lg shadow-sm border"
+图标: "text-4xl mb-4"
+标题: "text-xl font-semibold text-gray-900 mb-2"
+描述: "text-gray-600"
+
+社交链接区域:
+容器: "flex justify-center space-x-6"
+链接按钮: "flex items-center justify-center w-12 h-12 bg-[color] text-white rounded-full hover:bg-[darker] transition-colors"
+颜色方案:
+  - GitHub: bg-gray-800 hover:bg-gray-700
+  - LinkedIn: bg-blue-600 hover:bg-blue-700
+  - Twitter: bg-blue-400 hover:bg-blue-500
+  - Email: bg-red-500 hover:bg-red-600
+
+==================================================
+论文读后感页面 (Papers)
+==================================================
+
+文件: src/app/papers/page.tsx
+
+主容器:
+- "max-w-6xl mx-auto px-4 py-8 bg-white shadow-sm rounded-lg mx-4 my-8"
+- 最大宽度: 6xl (比首页宽)
+
+页面标题区:
+- "text-center mb-12 p-6"
+- 标题: "text-4xl font-bold text-gray-900 mb-4"
+- 副标题: "text-lg text-gray-600"
+
+论文卡片容器:
+- "grid grid-cols-1 lg:grid-cols-2 gap-8"
+- 1列 (移动端)
+- 2列 (大屏幕)
+- 间距: 32px
+
+单个论文卡片:
+容器: "bg-white rounded-lg shadow-md border p-6 hover:shadow-lg transition-shadow"
+  - 白色背景
+  - 圆角: 大
+  - 阴影: 中等
+  - 边框
+  - 内边距: 24px
+  - 悬停时加深阴影
+  - 过渡效果: 阴影
+
+标题: "text-xl font-semibold text-gray-900 mb-2"
+作者: "flex items-center text-sm text-gray-600 mb-2"
+期刊: "flex items-center text-sm text-gray-600 mb-3"
+
+评分组件 (StarRating):
+容器: "flex items-center"
+星星: "Star size={16}"
+  - 已选: "text-yellow-400 fill-current"
+  - 未选: "text-gray-300"
+评分文字: "ml-2 text-sm text-gray-600"
+
+读后感部分:
+标题: "font-medium text-gray-900 mb-2"
+内容: "text-gray-700 leading-relaxed"
+
+关键洞见:
+标题: "font-medium text-gray-900 mb-2"
+列表: "list-disc list-inside text-gray-700 space-y-1"
+列表项: "text-sm"
+
+阅读日期:
+容器: "flex items-center text-sm text-gray-500 pt-4 border-t"
+图标: "Calendar size={16} mr-1"
+
+空状态:
+容器: "text-center py-12"
+图标: "text-6xl mb-4"
+标题: "text-2xl font-semibold text-gray-900 mb-2"
+说明: "text-gray-600"
+
+==================================================
+项目经历页面 (Projects)
+==================================================
+
+文件: src/app/projects/page.tsx
+
+布局: 与论文页面类似
+- "max-w-6xl mx-auto px-4 py-8 bg-white shadow-sm rounded-lg mx-4 my-8"
+- "grid grid-cols-1 lg:grid-cols-2 gap-8"
+
+项目卡片:
+容器: "bg-white rounded-lg shadow-md border p-6 hover:shadow-lg transition-shadow"
+
+标题: "text-xl font-semibold text-gray-900 mb-2"
+
+状态指示器:
+容器: "flex items-center mb-3"
+图标颜色:
+  - completed: "text-green-500"
+  - in-progress: "text-blue-500"
+  - planned: "text-gray-400"
+状态文字: "ml-2 text-sm text-gray-600"
+
+链接按钮:
+容器: "flex space-x-2"
+按钮: "text-gray-600 hover:text-gray-900 transition-colors"
+
+描述: "text-gray-700 mb-4 leading-relaxed"
+
+技术栈:
+标题: "font-medium text-gray-900 mb-2"
+标签容器: "flex flex-wrap gap-2"
+单个标签: "bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm"
+
+项目亮点:
+标题: "font-medium text-gray-900 mb-2"
+列表: "list-disc list-inside text-gray-700 space-y-1"
+列表项: "text-sm"
+
+日期显示:
+容器: "flex items-center text-sm text-gray-500 pt-4 border-t"
+图标: "Calendar size={16} mr-1"
+
+==================================================
+AI 时间轴页面 (AI Timeline)
+==================================================
+
+文件: src/app/ai-timeline/page.tsx
+
+主容器: "max-w-6xl mx-auto px-4 py-8 bg-white shadow-sm rounded-lg mx-4 my-8"
+
+时间轴线:
+- "absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-indigo-200"
+- 位置: 居中
+- 宽度: 4px
+- 颜色: 靛蓝色
+
+时间轴节点:
+- "w-4 h-4 bg-indigo-600 rounded-full border-4 border-white shadow"
+- 宽高: 16px
+- 圆形
+- 靛蓝色背景
+- 白色边框
+- 阴影效果
+
+移动端布局:
+容器: "md:hidden"
+卡片: "flex-1 bg-white p-4 rounded-lg shadow-md border"
+
+分类标签:
+- "text-sm font-medium text-indigo-600 bg-indigo-100 px-2 py-1 rounded"
+- 字号: 小
+- 靛蓝色主题
+- 圆角
+
+日期:
+- "text-sm text-gray-500"
+
+标题:
+- 移动端: "text-lg font-semibold text-gray-900 mb-2"
+- 桌面端: "text-xl font-semibold text-gray-900 mb-2"
+
+描述:
+- 移动端: "text-gray-700 mb-3 text-sm leading-relaxed"
+- 桌面端: "text-gray-700 mb-3"
+
+影响:
+- "text-sm text-gray-600"
+- 强调: "<strong>影响：</strong>"
+
+桌面端布局:
+容器: "hidden md:flex items-center w-full"
+左右交替: "flex-row-reverse" (奇数项)
+卡片: "bg-white p-6 rounded-lg shadow-md border"
+
+==================================================
+颜色方案
+==================================================
+
+主色调:
+- 背景色: bg-gray-50 (#F9FAFB)
+- 卡片背景: bg-white (#FFFFFF)
+- 主文字: text-gray-900 (#111827)
+- 副文字: text-gray-700 (#374151)
+- 辅助文字: text-gray-600 (#4B5563)
+
+强调色:
+- 主要强调: indigo-600 (#4F46E5) - AI时间轴
+- 成功: green-500 (#22C55E) - 已完成状态
+- 进行中: blue-500 (#3B82F6) - 进行中状态
+- 警告: yellow-400 (#FACC15) - 评分星星
+
+交互色:
+- 链接: text-gray-700 hover:text-gray-900
+- 按钮悬停: hover:shadow-lg
+- 背景悬停: hover:bg-gray-100
+
+==================================================
+响应式断点
+==================================================
+
+Tailwind 默认断点:
+- sm: 640px
+- md: 768px
+- lg: 1024px
+- xl: 1280px
+- 2xl: 1536px
+
+使用示例:
+- 导航栏: 768px 以下显示移动菜单
+- 卡片网格: 1024px 以上 2 列布局
+- 技能网格: 768px 以上 4 列布局
+
+==================================================
+字体设置
+==================================================
+
+默认字体: Arial, Helvetica, sans-serif
+抗锯齿: antialiased
+
+字号等级:
+- text-sm: 14px (辅助文字)
+- text-base: 16px (正文)
+- text-lg: 18px (副标题)
+- text-xl: 20px (卡片标题)
+- text-2xl: 24px (导航logo)
+- text-3xl: 30px (区块标题)
+- text-4xl: 36px (页面标题)
+
+字重:
+- font-medium: 500 (强调文字)
+- font-semibold: 600 (卡片标题)
+- font-bold: 700 (页面标题)
+
+==================================================
+间距系统
+==================================================
+
+内边距 (padding):
+- p-2: 8px
+- p-3: 12px
+- p-4: 16px
+- p-6: 24px
+- p-8: 32px
+
+外边距 (margin):
+- mb-2: 8px
+- mb-4: 16px
+- mb-6: 24px
+- mb-8: 32px
+- mb-12: 48px
+
+间距 (gap):
+- gap-2: 8px
+- gap-4: 16px
+- gap-6: 24px
+- gap-8: 32px
+
+==================================================
+阴影效果
+==================================================
+
+- shadow-sm: 小阴影 (卡片)
+- shadow-md: 中等阴影 (卡片)
+- shadow-lg: 大阴影 (悬停)
+- shadow-xl: 特大阴影 (强调)
+
+==================================================
+圆角设置
+==================================================
+
+- rounded: 4px (小圆角)
+- rounded-lg: 8px (大圆角)
+- rounded-full: 100% (圆形)
+
+==================================================
+过渡动画
+==================================================
+
+- transition-colors: 颜色过渡
+- transition-shadow: 阴影过渡
+- 默认时长: 150ms
+- 缓动函数: ease-in-out
+
+==================================================
+图标
+==================================================
+
+使用: lucide-react
+尺寸: 通常 16px 或 20px
+
+常用图标:
+- Calendar: 日期
+- Github: GitHub 链接
+- ExternalLink: 外部链接
+- Mail: 邮箱
+- Users: 作者
+- BookOpen: 期刊
+- Star: 评分
+- CheckCircle: 已完成
+- Clock: 进行中
+- Circle: 计划中
+
+==================================================
+特殊组件样式
+==================================================
+
+卡片悬停效果:
+- 初始: shadow-md
+- 悬停: shadow-lg
+- 过渡: transition-shadow
+
+标签样式:
+- 技术栈: "bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm"
+- 分类: "text-indigo-600 bg-indigo-100 px-2 py-1 rounded"
+
+状态徽章:
+- 圆点图标 + 文字
+- 颜色编码 (绿/蓝/灰)
+
+==================================================
+空状态设计
+==================================================
+
+图标: text-6xl (超大表情符号)
+标题: text-2xl font-semibold
+说明: text-gray-600
+容器: text-center py-12
+
+==================================================
+配置文件
+==================================================
+
+Tailwind 配置: tailwind.config.js
+PostCSS 配置: postcss.config.js
+全局样式: src/app/globals.css
+
+==================================================
+注意事项
+==================================================
+
+1. 所有页面使用统一的容器宽度和间距
+2. 移动端优先的响应式设计
+3. 悬停效果增强交互体验
+4. 颜色对比度符合无障碍标准
+5. 使用 Tailwind 实用类，避免自定义 CSS
+
+==================================================
+结束
+==================================================

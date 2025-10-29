@@ -1,0 +1,30 @@
+{
+  "events": [
+    {
+      "id": "29aec685-df0f-8014-9565-f8596ff254b5",
+      "title": "Chatgpt发布",
+      "date": "2022-11-30",
+      "description": "1234456",
+      "category": "架构创新",
+      "impact": "太重要"
+    },
+    {
+      "id": "29aec685-df0f-807e-92b2-f61da15ce8c9",
+      "title": "",
+      "date": "",
+      "description": "",
+      "category": "",
+      "impact": ""
+    },
+    {
+      "id": "29aec685-df0f-80a1-9a4d-ca70ff07afbb",
+      "title": "",
+      "date": "",
+      "description": "",
+      "category": "",
+      "impact": ""
+    }
+  ],
+  "lastUpdated": "2025-10-29T06:45:25.075Z",
+  "count": 3
+}

@@ -1,0 +1,7 @@
+# 请将以下内容复制到 .env.local 文件中（使用你自己的值）
+# 创建方法：在项目根目录新建文件，命名为 .env.local
+
+NOTION_TOKEN=your_notion_integration_token
+NOTION_AI_TIMELINE_DATABASE_ID=your_ai_timeline_database_id
+NOTION_PAPERS_DATABASE_ID=your_papers_database_id
+NOTION_PROJECTS_DATABASE_ID=your_projects_database_id

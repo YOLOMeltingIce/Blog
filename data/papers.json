@@ -1,0 +1,23 @@
+{
+  "papers": [
+    {
+      "id": "29aec685-df0f-80e6-bd7a-c9054a18f51d",
+      "title": "ABQWD",
+      "authors": [
+        "123"
+      ],
+      "journal": "123",
+      "year": 2023,
+      "rating": 5,
+      "readDate": "2023-10-12",
+      "summary": "123",
+      "reason": "爱得起",
+      "coreContent": "权威的",
+      "insights": "权威的",
+      "review": "这是一条测试",
+      "keyInsights": []
+    }
+  ],
+  "lastUpdated": "2025-10-29T06:45:23.404Z",
+  "count": 1
+}

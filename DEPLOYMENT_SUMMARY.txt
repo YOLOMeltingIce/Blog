@@ -1,0 +1,25 @@
+# 部署说明
+
+我已经为您创建了详细的部署指南 [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)，其中包含了将您的博客部署到 GitHub 并通过 Vercel 实现持续部署的完整步骤。
+
+## 部署要点总结
+
+1. **GitHub + Vercel 方案**：
+   - 将代码托管在 GitHub 上
+   - 通过 Vercel 实现自动部署
+   - 每次推送代码后自动重新部署网站
+
+2. **环境变量配置**：
+   在 Vercel 中配置以下环境变量（使用你自己的值）：
+   - NOTION_TOKEN = your_notion_integration_token
+   - NOTION_AI_TIMELINE_DATABASE_ID = your_ai_timeline_database_id
+   - NOTION_PAPERS_DATABASE_ID = your_papers_database_id
+   - NOTION_PROJECTS_DATABASE_ID = your_projects_database_id
+
+3. **部署后的内容更新流程**：
+   - 在 Notion 中更新内容
+   - 本地运行 `npm run fetch-data` 获取最新数据
+   - 提交并推送到 GitHub
+   - Vercel 自动重新部署
+
+按照 [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) 中的详细步骤操作，您就可以成功将博客部署到网上，让面试官通过网址访问您的内容了。

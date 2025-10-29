@@ -1,0 +1,4 @@
+# Notion API 配置
+NOTION_TOKEN=your_notion_token_here
+NOTION_PAPERS_DATABASE_ID=your_papers_database_id_here
+NOTION_PROJECTS_DATABASE_ID=your_projects_database_id_here
