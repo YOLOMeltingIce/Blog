@@ -29,8 +29,9 @@ export interface PaperReview {
   authors: string[];
   journal: string;
   year: number;
-  rating: number;
-  readDate: string;
+  date?: string;          // 论文发表时间
+  readDate: string;       // 阅读日期
+  category?: string;      // 分类
   // 新增字段
   summary?: string;       // 概要
   reason?: string;        // 阅读理由
@@ -53,6 +54,23 @@ export interface Project {
   demoUrl?: string;
   startDate?: string;
   endDate?: string;
+}
+
+// 产品体验类型
+export interface ProductExperience {
+  id: string;
+  name: string;
+  icon?: string; // SVG或PNG URL
+  category?: string;
+  company?: string;
+  country?: string;
+  updateDate?: string;
+  positioning?: string;
+  coreCapabilities?: string;
+  userExperience?: string;
+  complianceRisks?: string;
+  ecosystemAndScalability?: string;
+  commercialPotential?: string;
 }
 
 // 个人简介类型

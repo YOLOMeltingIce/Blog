@@ -1,7 +1,8 @@
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '..', '.env.local') });
 const https = require('https');
 const http = require('http');
 const fs = require('fs');
-const path = require('path');
 
 // 创建一个支持 HTTP/1.1 的 Agent
 const agent = new https.Agent({
@@ -15,9 +16,10 @@ const NOTION_TOKEN = process.env.NOTION_TOKEN;
 const PAPERS_DATABASE_ID = process.env.NOTION_PAPERS_DATABASE_ID;
 const PROJECTS_DATABASE_ID = process.env.NOTION_PROJECTS_DATABASE_ID;
 const AI_TIMELINE_DATABASE_ID = process.env.NOTION_AI_TIMELINE_DATABASE_ID;
+const PRODUCTS_DATABASE_ID = process.env.NOTION_PRODUCTS_DATABASE_ID;
 
 if (!NOTION_TOKEN || !PAPERS_DATABASE_ID || !PROJECTS_DATABASE_ID || !AI_TIMELINE_DATABASE_ID) {
-  console.error('Missing Notion env. Please set NOTION_TOKEN and all DATABASE_IDs.');
+  console.error('Missing Notion env. Please set NOTION_TOKEN and all required DATABASE_IDs.');
   process.exit(1);
 }
 
@@ -109,6 +111,7 @@ async function getDatabasePages(databaseId, retries = 3) {
         };
 
         const req = https.request(options, (res) => {
+          res.setEncoding('utf8'); // 设置UTF-8编码
           let data = '';
 
           res.on('data', (chunk) => {
@@ -167,15 +170,17 @@ async function fetchPapersData() {
     
     const papers = pages.map(page => {
       const props = page.properties;
+      const paperDate = extractTextFromProperty(props['Date'] || props['日期'] || props['论文发表时间']);
       
       return {
         id: page.id,
         title: extractTextFromProperty(props['标题'] || props['Title'] || props['论文标题']),
-        authors: extractArrayFromProperty(props['作者'] || props['Authors'] || props['分类']),
+        authors: extractArrayFromProperty(props['作者'] || props['Authors']),
         journal: extractTextFromProperty(props['期刊'] || props['Journal'] || props['会议']),
-        year: new Date(extractTextFromProperty(props['Date'] || props['日期'] || props['阅读日期']) || Date.now()).getFullYear(),
-        rating: extractNumberFromProperty(props['评分'] || props['Rating']) || 5,
-        readDate: extractTextFromProperty(props['Date'] || props['日期'] || props['阅读日期']),
+        year: new Date(paperDate || Date.now()).getFullYear(),
+        date: paperDate, // 论文发表时间
+        readDate: extractTextFromProperty(props['阅读日期'] || props['Read Date']), // 阅读日期
+        category: extractTextFromProperty(props['分类'] || props['Category'] || props['类别']), // 分类
         // 新字段
         summary: extractTextFromProperty(props['概要'] || props['Summary']),
         reason: extractTextFromProperty(props['阅读理由'] || props['Reason']),
@@ -185,7 +190,7 @@ async function fetchPapersData() {
         review: extractTextFromProperty(props['内容总结'] || props['读后感'] || props['Review']),
         keyInsights: extractArrayFromProperty(props['关键洞见'] || props['Key Insights']),
       };
-    }).sort((a, b) => new Date(b.readDate).getTime() - new Date(a.readDate).getTime());
+    }).sort((a, b) => new Date(a.date || 0).getTime() - new Date(b.date || 0).getTime());
 
     const papersData = {
       papers,
@@ -195,7 +200,8 @@ async function fetchPapersData() {
 
     fs.writeFileSync(
       path.join(dataDir, 'papers.json'),
-      JSON.stringify(papersData, null, 2)
+      JSON.stringify(papersData, null, 2),
+      'utf-8'
     );
 
     console.log(`✅ 成功获取 ${papers.length} 篇论文数据`);
@@ -238,7 +244,8 @@ async function fetchProjectsData() {
 
     fs.writeFileSync(
       path.join(dataDir, 'projects.json'),
-      JSON.stringify(projectsData, null, 2)
+      JSON.stringify(projectsData, null, 2),
+      'utf-8'
     );
 
     console.log(`✅ 成功获取 ${projects.length} 个项目数据`);
@@ -267,7 +274,7 @@ async function fetchAITimelineData() {
         category: extractTextFromProperty(props['分类'] || props['Category'] || props['类别']),
         impact: extractTextFromProperty(props['影响'] || props['Impact'] || props['重要性']),
       };
-    }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    }).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
     const timelineData = {
       events,
@@ -277,7 +284,8 @@ async function fetchAITimelineData() {
 
     fs.writeFileSync(
       path.join(dataDir, 'ai-timeline.json'),
-      JSON.stringify(timelineData, null, 2)
+      JSON.stringify(timelineData, null, 2),
+      'utf-8'
     );
 
     console.log(`✅ 成功获取 ${events.length} 个 AI 时间轴事件`);
@@ -285,6 +293,72 @@ async function fetchAITimelineData() {
   } catch (error) {
     console.error('❌ 获取 AI 时间轴数据失败:', error);
     return { events: [], lastUpdated: new Date().toISOString(), count: 0 };
+  }
+}
+
+// 从 Notion 属性中提取文件/图片 URL
+function extractFileFromProperty(property) {
+  if (!property) return '';
+  
+  switch (property.type) {
+    case 'files':
+      return property.files?.[0]?.file?.url || property.files?.[0]?.external?.url || '';
+    case 'url':
+      return property.url || '';
+    default:
+      return '';
+  }
+}
+
+// 获取产品体验数据
+async function fetchProductsData() {
+  console.log('📱 正在获取产品体验数据...');
+  
+  if (!PRODUCTS_DATABASE_ID) {
+    console.log('⚠️ 未配置产品数据库ID，跳过产品数据获取');
+    return { products: [], lastUpdated: new Date().toISOString(), count: 0 };
+  }
+  
+  try {
+    const pages = await getDatabasePages(PRODUCTS_DATABASE_ID);
+    
+    const products = pages.map(page => {
+      const props = page.properties;
+      
+      return {
+        id: page.id,
+        name: extractTextFromProperty(props['Name'] || props['名称'] || props['产品名称']),
+        icon: extractFileFromProperty(props['图标'] || props['Icon'] || props['IconURL']),
+        category: extractTextFromProperty(props['类别'] || props['Category']),
+        company: extractTextFromProperty(props['公司'] || props['Company']),
+        country: extractTextFromProperty(props['国家'] || props['Country']),
+        updateDate: extractTextFromProperty(props['更新日期'] || props['Update Date'] || props['日期']),
+        positioning: extractTextFromProperty(props['定位'] || props['Positioning']),
+        coreCapabilities: extractTextFromProperty(props['核心能力'] || props['Core Capabilities']),
+        userExperience: extractTextFromProperty(props['使用体验'] || props['User Experience']),
+        complianceRisks: extractTextFromProperty(props['合规风险'] || props['Compliance Risks']),
+        ecosystemAndScalability: extractTextFromProperty(props['生态系统与可扩展性'] || props['Ecosystem And Scalability']),
+        commercialPotential: extractTextFromProperty(props['商业化潜力'] || props['Commercial Potential']),
+      };
+    });
+
+    const productsData = {
+      products,
+      lastUpdated: new Date().toISOString(),
+      count: products.length
+    };
+
+    fs.writeFileSync(
+      path.join(dataDir, 'products.json'),
+      JSON.stringify(productsData, null, 2),
+      'utf-8'
+    );
+
+    console.log(`✅ 成功获取 ${products.length} 个产品数据`);
+    return productsData;
+  } catch (error) {
+    console.error('❌ 获取产品数据失败:', error);
+    return { products: [], lastUpdated: new Date().toISOString(), count: 0 };
   }
 }
 
@@ -298,6 +372,7 @@ async function main() {
     const papersData = await fetchPapersData();
     const projectsData = await fetchProjectsData();
     const timelineData = await fetchAITimelineData();
+    const productsData = await fetchProductsData();
 
     // 创建汇总信息
     const summary = {
@@ -313,16 +388,21 @@ async function main() {
       aiTimeline: {
         count: timelineData.count,
         lastUpdated: timelineData.lastUpdated
+      },
+      products: {
+        count: productsData.count,
+        lastUpdated: productsData.lastUpdated
       }
     };
 
     fs.writeFileSync(
       path.join(dataDir, 'summary.json'),
-      JSON.stringify(summary, null, 2)
+      JSON.stringify(summary, null, 2),
+      'utf-8'
     );
 
     console.log('🎉 数据获取完成！');
-    console.log(`📊 汇总: ${papersData.count} 篇论文, ${projectsData.count} 个项目, ${timelineData.count} 个 AI 事件`);
+    console.log(`📊 汇总: ${papersData.count} 篇论文, ${projectsData.count} 个项目, ${timelineData.count} 个 AI 事件, ${productsData.count} 个产品`);
     console.log('📁 数据已保存到 data/ 目录');
     
   } catch (error) {
@@ -336,4 +416,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { fetchPapersData, fetchProjectsData, fetchAITimelineData };
+module.exports = { fetchPapersData, fetchProjectsData, fetchAITimelineData, fetchProductsData };

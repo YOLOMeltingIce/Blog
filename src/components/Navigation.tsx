@@ -9,6 +9,7 @@ const navItems = [
   { name: "首页", href: "/" },
   { name: "研读", href: "/papers" },
   { name: "项目", href: "/projects" },
+  { name: "产品体验", href: "/products" },
   { name: "AI时间轴", href: "/ai-timeline" },
 ]
 

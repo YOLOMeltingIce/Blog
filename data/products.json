@@ -1,0 +1,66 @@
+{
+  "products": [
+    {
+      "id": "29eec685-df0f-806b-ae1f-c37d200b0d09",
+      "name": "豆包",
+      "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4b78b184-4885-4353-b9a1-ec24c3073800/6e376925-10a2-483e-807d-a7193d8ca421/doubao-color.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664TSU4WUN%2F20251101%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20251101T145053Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEGQaCXVzLXdlc3QtMiJHMEUCIQDv%2F8RBWkyR%2BcTRwDfaEN0qfxIdBDZoJQTRl6InF6gIVQIgJP0Cbs2XJyqXMCsA1TKJdRjGIXad0DVJWJbcNiyDRIEq%2FwMILRAAGgw2Mzc0MjMxODM4MDUiDJ%2BgrL%2FKTgSThz7yoCrcAzbgl%2BLIa2tbVDAwiPWB6AmeGg56hrMLU4mAHgj6zHmsX2EYUp9RJrtL1RQjlK9ya4hR4XSKL9e0wOLawWTGrf2KNaRte2bi%2FiFu7HDbIrj21QKfPqFysBgXqI5l4TmZIm%2FWrMsf2F5S4j5k%2BBE6Nzwsab8%2Fb5rHA7mXOyfUVz4i3BucJcgYT269JtZEC%2F%2BOgU6AfQsqKo3m7JwepvMVDS7UMYm8NJM61L8qyhgz%2F%2FJKGrsf5lw%2FIKexTgwUXF0Pb6UMvyjs%2F1Hf2cqODg9kkNmzqSwgzpLlFR1ViLBCPFmKYgJIHzprdcEmtCpnwa%2F0VL8JuqCuojhY94FuO%2FD69i0f5Z7OReFNRCuz%2FN8L8H0QiUeOToHWfdKFfFPl%2BVU864%2B1fhtuZ5Tp56BjAdoGLQCbtAp0bCKjRFm6a5%2BwsrWmaXnEYO1NnwHfHYcHbiVJpoEEhGzDluM9sw3ZKQu8I8jenga0uHnQk3QY%2FS8TzwMhugbVy9K0UvKriP5nWjuzuHwFJs1UIhWzKnyR8ySso8F6s4PFrRPl%2BLAsV5sv0e7C0hmLLM2HEyAY%2FWn%2BBmThi6WhTFHRvJQg%2F1XzT1c9TxOINeA%2BKKP%2BR0GxKXPJ8WntkUYvOYP24yEcZdwDMOTtl8gGOqUBhev%2FaqTyWjLxIvdKFnLBGhWUV0WwzuiglIhqMtsA1tomsn5b%2FBLx6C%2FOKVMi95GKPMcucI%2BzhGA5STDNSp%2F%2F1cUEsBCeJ5x7s7hHVjRSmewbpOIDBH94gkNRdBk%2B4fV4W9Na8nnHBURt%2FFt09WtqAI45bZHA6%2BRPeTFzFR2CyxjmczemtZHv6c25GbM6KV0DH%2FnmLiCrTq6xfeuEJXzJi5mxKkhv&X-Amz-Signature=e67fdf29e61493864b5789c8a9615f0715da2da4c0973bc8986b4045068c38cb&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "category": "多模态大模型",
+      "company": "字节跳动",
+      "country": "中国",
+      "updateDate": "2025-10-16",
+      "positioning": "多功能人工智能助手",
+      "coreCapabilities": "1. 多模态交互\n2. 内容生成（文案，报告，图片，视频等）\n3. 智能推理",
+      "userExperience": "1.界面集成多种功能，除聊天外还有创作，编程，与AI数字人练口语等，可玩性多\n2.响应速度快",
+      "complianceRisks": "暂无",
+      "ecosystemAndScalability": "1. 嵌入抖音国民级APP体系内，流量巨大，月活量当下最高。\n2. 豆包模型家族庞大。人们日常用于聊天的模型费用低，更多是用来收集信息与导流的平台。导流平台背后有火山引擎，HiAgent等面向专业消费者与企业的付费产品。",
+      "commercialPotential": "豆包在专业评测榜上虽并未出现，但依托抖音流量入口和费用低，已成为流量最多的大模型应用，可以算是在C端拿到了很好的商业化结果。此模型可以为背后的专业模型导流。豆包背后有火山引擎，HiAgent等多款面向专业消费者与企业的付费产品，若在未来的评测榜单中，背后的专业模型在各大专业评测榜单上占有一席之地，将有很大的商业化潜力。"
+    },
+    {
+      "id": "29eec685-df0f-807a-abec-c9b3617c065f",
+      "name": "腾讯元宝",
+      "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4b78b184-4885-4353-b9a1-ec24c3073800/ff9bdece-9c9d-4b58-ad3b-077fbec05f11/yuanbao-color.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664TSU4WUN%2F20251101%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20251101T145053Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEGQaCXVzLXdlc3QtMiJHMEUCIQDv%2F8RBWkyR%2BcTRwDfaEN0qfxIdBDZoJQTRl6InF6gIVQIgJP0Cbs2XJyqXMCsA1TKJdRjGIXad0DVJWJbcNiyDRIEq%2FwMILRAAGgw2Mzc0MjMxODM4MDUiDJ%2BgrL%2FKTgSThz7yoCrcAzbgl%2BLIa2tbVDAwiPWB6AmeGg56hrMLU4mAHgj6zHmsX2EYUp9RJrtL1RQjlK9ya4hR4XSKL9e0wOLawWTGrf2KNaRte2bi%2FiFu7HDbIrj21QKfPqFysBgXqI5l4TmZIm%2FWrMsf2F5S4j5k%2BBE6Nzwsab8%2Fb5rHA7mXOyfUVz4i3BucJcgYT269JtZEC%2F%2BOgU6AfQsqKo3m7JwepvMVDS7UMYm8NJM61L8qyhgz%2F%2FJKGrsf5lw%2FIKexTgwUXF0Pb6UMvyjs%2F1Hf2cqODg9kkNmzqSwgzpLlFR1ViLBCPFmKYgJIHzprdcEmtCpnwa%2F0VL8JuqCuojhY94FuO%2FD69i0f5Z7OReFNRCuz%2FN8L8H0QiUeOToHWfdKFfFPl%2BVU864%2B1fhtuZ5Tp56BjAdoGLQCbtAp0bCKjRFm6a5%2BwsrWmaXnEYO1NnwHfHYcHbiVJpoEEhGzDluM9sw3ZKQu8I8jenga0uHnQk3QY%2FS8TzwMhugbVy9K0UvKriP5nWjuzuHwFJs1UIhWzKnyR8ySso8F6s4PFrRPl%2BLAsV5sv0e7C0hmLLM2HEyAY%2FWn%2BBmThi6WhTFHRvJQg%2F1XzT1c9TxOINeA%2BKKP%2BR0GxKXPJ8WntkUYvOYP24yEcZdwDMOTtl8gGOqUBhev%2FaqTyWjLxIvdKFnLBGhWUV0WwzuiglIhqMtsA1tomsn5b%2FBLx6C%2FOKVMi95GKPMcucI%2BzhGA5STDNSp%2F%2F1cUEsBCeJ5x7s7hHVjRSmewbpOIDBH94gkNRdBk%2B4fV4W9Na8nnHBURt%2FFt09WtqAI45bZHA6%2BRPeTFzFR2CyxjmczemtZHv6c25GbM6KV0DH%2FnmLiCrTq6xfeuEJXzJi5mxKkhv&X-Amz-Signature=76e3694601b0ba66921121fbc2f45e43e665895062796baadce23cdd7ca5a495&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "category": "多模态大模型",
+      "company": "腾讯",
+      "country": "中国",
+      "updateDate": "2025-10-19",
+      "positioning": "C端AI助手",
+      "coreCapabilities": "1. 内置AI搜索，接入微信搜一搜、搜狗搜索等，覆盖微信公众号、视频号等信源\n2. 多模态理解与创作\n3. 256K长上下文窗口",
+      "userExperience": "1. 类似豆包，具有百变AI头像等功能，玩法多。\n2. 回复质量稳定，信息质量、专业度方面个人感觉略高于豆包，兼具响应速度与推理性。",
+      "complianceRisks": "暂无",
+      "ecosystemAndScalability": "1. 搜索与答案覆盖微信公众号/视频号等内容\n2. 通过腾讯元器一站式创作与分发平台，支持将智能体一键分发至元宝、微信客服、QQ、腾讯云等渠道，并规划扩展至微信公众号/小程序；提供丰富插件与知识库，降低开发者接入成本\n3. 跨端协同与工具链：与腾讯文档、电脑管家、搜狗输入法等深度打通，形成“入口—工具—服务”闭环\n",
+      "commercialPotential": "腾讯在大模型领域入场较晚，但后来者居上，目前已取得优异成绩。自研混元模型的推理力在国际测试中表现优秀，元宝应用的活跃度也稳居国内AI应用的第四位。相信随着时间发展，依托微信的流量以及腾讯云已有的规模，腾讯依然可以在未来的商业化业务中稳居前列。\n（甚至已经开始在界面里植入腾讯视频，开始尝试广告业务了）"
+    },
+    {
+      "id": "29eec685-df0f-80a8-b34d-f5505fb9b408",
+      "name": "夸克",
+      "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4b78b184-4885-4353-b9a1-ec24c3073800/0c7d265d-05a8-4cf8-8927-08ba560363be/%E5%A4%B8%E5%85%8B.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664TSU4WUN%2F20251101%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20251101T145053Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEGQaCXVzLXdlc3QtMiJHMEUCIQDv%2F8RBWkyR%2BcTRwDfaEN0qfxIdBDZoJQTRl6InF6gIVQIgJP0Cbs2XJyqXMCsA1TKJdRjGIXad0DVJWJbcNiyDRIEq%2FwMILRAAGgw2Mzc0MjMxODM4MDUiDJ%2BgrL%2FKTgSThz7yoCrcAzbgl%2BLIa2tbVDAwiPWB6AmeGg56hrMLU4mAHgj6zHmsX2EYUp9RJrtL1RQjlK9ya4hR4XSKL9e0wOLawWTGrf2KNaRte2bi%2FiFu7HDbIrj21QKfPqFysBgXqI5l4TmZIm%2FWrMsf2F5S4j5k%2BBE6Nzwsab8%2Fb5rHA7mXOyfUVz4i3BucJcgYT269JtZEC%2F%2BOgU6AfQsqKo3m7JwepvMVDS7UMYm8NJM61L8qyhgz%2F%2FJKGrsf5lw%2FIKexTgwUXF0Pb6UMvyjs%2F1Hf2cqODg9kkNmzqSwgzpLlFR1ViLBCPFmKYgJIHzprdcEmtCpnwa%2F0VL8JuqCuojhY94FuO%2FD69i0f5Z7OReFNRCuz%2FN8L8H0QiUeOToHWfdKFfFPl%2BVU864%2B1fhtuZ5Tp56BjAdoGLQCbtAp0bCKjRFm6a5%2BwsrWmaXnEYO1NnwHfHYcHbiVJpoEEhGzDluM9sw3ZKQu8I8jenga0uHnQk3QY%2FS8TzwMhugbVy9K0UvKriP5nWjuzuHwFJs1UIhWzKnyR8ySso8F6s4PFrRPl%2BLAsV5sv0e7C0hmLLM2HEyAY%2FWn%2BBmThi6WhTFHRvJQg%2F1XzT1c9TxOINeA%2BKKP%2BR0GxKXPJ8WntkUYvOYP24yEcZdwDMOTtl8gGOqUBhev%2FaqTyWjLxIvdKFnLBGhWUV0WwzuiglIhqMtsA1tomsn5b%2FBLx6C%2FOKVMi95GKPMcucI%2BzhGA5STDNSp%2F%2F1cUEsBCeJ5x7s7hHVjRSmewbpOIDBH94gkNRdBk%2B4fV4W9Na8nnHBURt%2FFt09WtqAI45bZHA6%2BRPeTFzFR2CyxjmczemtZHv6c25GbM6KV0DH%2FnmLiCrTq6xfeuEJXzJi5mxKkhv&X-Amz-Signature=23beb06f6594649ec1df0d0b3308f400e314e588878640412bb6fa49e405027c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "category": "AI搜索应用",
+      "company": "阿里",
+      "country": "中国",
+      "updateDate": "2025-09-01",
+      "positioning": "AI驱动的智能搜索与效率工具",
+      "coreCapabilities": "1.智能搜索：多模态搜索，AI总结网页内容\n2. 效率工具：AI生图，写作，生视频\n3.技术能力优秀，Qwen模型的测评结果较强。\n4.在搜索教育与医疗两个领域时，会调用自训练的垂类模型，以便给出更专业的搜索结果。",
+      "userExperience": "1. 无广告干扰。\n2. 搜索准确度体验上并不弱于百度\n3. 当搜索的是个问题时，会进行思考并总结性回答，相当于一个AI助手，在答案下方会继续展示搜索内容。当搜索的不是一个具体问题时，不会做总结性回答，只提供相关性网页。这点体验挺好的，让人感觉定位准确，是智能版的搜索引擎。\n4.轻量化设计，响应速度快。\n",
+      "complianceRisks": "暂无",
+      "ecosystemAndScalability": "1.与阿里系协同：接入支付宝（生活服务）、钉钉（办公）、高德（地图）等，实现数据与功能互通\n2.跨平台覆盖：除App外，已推出小程序（微信/支付宝）、PC端插件，未来或拓展至车载/智能眼镜等终端。",
+      "commercialPotential": "1. 同类AI产品对比：夸克在AI搜索引擎赛道已有巨头之势，与国内同类AI搜索产品的第二名的月活量相差十倍。\n2. 传统搜索引擎与AI搜索引擎对比：传统搜索引擎使用率有下降趋势，反之AI搜索引擎使用率逐步升高。\n3. 搜索引擎的商业化场景成熟，比只回答问题的大模型要更广阔。在积累足量的用户后，商业化前景可期。"
+    },
+    {
+      "id": "29eec685-df0f-80f8-9a2e-ef7f0751f959",
+      "name": "Kimi（K2）",
+      "icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4b78b184-4885-4353-b9a1-ec24c3073800/8a9c83b9-1425-4e67-8b7b-469dd216d3b0/kimi-color.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664TSU4WUN%2F20251101%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20251101T145053Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEGQaCXVzLXdlc3QtMiJHMEUCIQDv%2F8RBWkyR%2BcTRwDfaEN0qfxIdBDZoJQTRl6InF6gIVQIgJP0Cbs2XJyqXMCsA1TKJdRjGIXad0DVJWJbcNiyDRIEq%2FwMILRAAGgw2Mzc0MjMxODM4MDUiDJ%2BgrL%2FKTgSThz7yoCrcAzbgl%2BLIa2tbVDAwiPWB6AmeGg56hrMLU4mAHgj6zHmsX2EYUp9RJrtL1RQjlK9ya4hR4XSKL9e0wOLawWTGrf2KNaRte2bi%2FiFu7HDbIrj21QKfPqFysBgXqI5l4TmZIm%2FWrMsf2F5S4j5k%2BBE6Nzwsab8%2Fb5rHA7mXOyfUVz4i3BucJcgYT269JtZEC%2F%2BOgU6AfQsqKo3m7JwepvMVDS7UMYm8NJM61L8qyhgz%2F%2FJKGrsf5lw%2FIKexTgwUXF0Pb6UMvyjs%2F1Hf2cqODg9kkNmzqSwgzpLlFR1ViLBCPFmKYgJIHzprdcEmtCpnwa%2F0VL8JuqCuojhY94FuO%2FD69i0f5Z7OReFNRCuz%2FN8L8H0QiUeOToHWfdKFfFPl%2BVU864%2B1fhtuZ5Tp56BjAdoGLQCbtAp0bCKjRFm6a5%2BwsrWmaXnEYO1NnwHfHYcHbiVJpoEEhGzDluM9sw3ZKQu8I8jenga0uHnQk3QY%2FS8TzwMhugbVy9K0UvKriP5nWjuzuHwFJs1UIhWzKnyR8ySso8F6s4PFrRPl%2BLAsV5sv0e7C0hmLLM2HEyAY%2FWn%2BBmThi6WhTFHRvJQg%2F1XzT1c9TxOINeA%2BKKP%2BR0GxKXPJ8WntkUYvOYP24yEcZdwDMOTtl8gGOqUBhev%2FaqTyWjLxIvdKFnLBGhWUV0WwzuiglIhqMtsA1tomsn5b%2FBLx6C%2FOKVMi95GKPMcucI%2BzhGA5STDNSp%2F%2F1cUEsBCeJ5x7s7hHVjRSmewbpOIDBH94gkNRdBk%2B4fV4W9Na8nnHBURt%2FFt09WtqAI45bZHA6%2BRPeTFzFR2CyxjmczemtZHv6c25GbM6KV0DH%2FnmLiCrTq6xfeuEJXzJi5mxKkhv&X-Amz-Signature=1e5811e9b4fb14b09d0d026a841912f18c3f9289ebf86854a8b706d9f31fb15f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "category": "多模态大模型",
+      "company": "月之暗面",
+      "country": "中国",
+      "updateDate": "2025-07-11",
+      "positioning": "1.专为Agent工作流设计，强调自主规划、执行与自我纠错能力，而非传统对话工具\n2.“非thinking模型”，主打低延迟与工具调用效率\n",
+      "coreCapabilities": "1. Coding 与 Agentic coding能力优秀，暂居国内前三水平\n2. 256K长上下文窗口",
+      "userExperience": "1. 编程方面：在做大型项目时的体验，不如Claude Sonnet 4.5（目前没有国内厂商能够媲美）\n2. 文档读取与内容生成能力：对于25MB的pdf，读取速度在10s左右（较快）。生成内容有产生幻觉的情况存在，需要人为检验或强制限定生成内容必须来自原文。",
+      "complianceRisks": "暂无",
+      "ecosystemAndScalability": "属于创业公司，公司主营大模型，相比互联网大厂缺乏自我生态。",
+      "commercialPotential": "模型迭代的速度很快，虽Kimi在发布时足够惊艳，但目前Kimi与Qwen3 和 DeepSeek-V3 两者的性能比较接近，三者同处于国内模型第一梯队。\n但是，在商业化层面，DeepSeek-V3 的token定价约为Kimi早期定价的一半（目前kimi已改会员制），价格方面并不占优。流量方面，DeepSeek与Qwen不仅主导了国内更多的市场份额，在海外也占据了更多的份额。\n在硬核编程领域，尽管国内模型进步显著，但尚无能与Claude全面匹敌的对手。面对复杂的大型编程任务，用户往往更愿意支付溢价，以换取顶级AI带来的卓越效率与可靠性。\n综上所述，在缺乏颠覆性技术突破的当下，市场竞争格局已趋于激烈，前景不算特别乐观。"
+    }
+  ],
+  "lastUpdated": "2025-11-01T14:50:55.471Z",
+  "count": 4
+}

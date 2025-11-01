@@ -3,20 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/fetch-notion-data.js",
     "dev": "next dev",
-    "build": "npm run fetch-data && next build",
+    "build": "node scripts/fetch-notion-data.js && next build",
     "start": "next start",
     "lint": "eslint",
     "fetch-data": "node scripts/fetch-notion-data.js",
-    "update-data": "node scripts/update-data.js",
-    "build:fast": "next build",
-    "build:local": "npm run update-data && next build",
-    "prebuild": "npm run fetch-data"
+    "update-data": "node scripts/update-data.js"
   },
   "dependencies": {
     "@notionhq/client": "^5.3.0",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
+    "dotenv": "^17.2.3",
     "lucide-react": "^0.548.0",
     "next": "^15.1.6",
     "react": "^19.0.0",

@@ -1,4 +1,4 @@
-import { PaperReview, Project, AITimelineEvent } from '@/types';
+import { PaperReview, Project, AITimelineEvent, ProductExperience } from '@/types';
 import fs from 'fs';
 import path from 'path';
 
@@ -7,6 +7,7 @@ const DATA_DIR = path.join(process.cwd(), 'data');
 const PAPERS_FILE = path.join(DATA_DIR, 'papers.json');
 const PROJECTS_FILE = path.join(DATA_DIR, 'projects.json');
 const AI_TIMELINE_FILE = path.join(DATA_DIR, 'ai-timeline.json');
+const PRODUCTS_FILE = path.join(DATA_DIR, 'products.json');
 
 // 数据接口
 interface PapersData {
@@ -23,6 +24,12 @@ interface ProjectsData {
 
 interface AITimelineData {
   events: AITimelineEvent[];
+  lastUpdated: string;
+  count: number;
+}
+
+interface ProductsData {
+  products: ProductExperience[];
   lastUpdated: string;
   count: number;
 }
@@ -80,6 +87,25 @@ export async function getLocalAITimelineData(): Promise<AITimelineEvent[]> {
     return data.events;
   } catch (error) {
     console.error('Error reading local AI timeline data:', error);
+    return [];
+  }
+}
+
+// 读取本地产品体验数据
+export async function getLocalProductsData(): Promise<ProductExperience[]> {
+  try {
+    if (!fs.existsSync(PRODUCTS_FILE)) {
+      console.warn('Products data file not found, returning empty array');
+      return [];
+    }
+
+    const fileContent = fs.readFileSync(PRODUCTS_FILE, 'utf-8');
+    const data: ProductsData = JSON.parse(fileContent);
+    
+    console.log(`📱 从本地文件读取 ${data.count} 个产品数据 (更新于: ${new Date(data.lastUpdated).toLocaleString('zh-CN')})`);
+    return data.products;
+  } catch (error) {
+    console.error('Error reading local products data:', error);
     return [];
   }
 }

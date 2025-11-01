@@ -1,30 +1,118 @@
 {
   "events": [
     {
-      "id": "29aec685-df0f-8014-9565-f8596ff254b5",
-      "title": "Chatgpt发布",
+      "id": "29bec685-df0f-80df-b643-e14b6a9ad107",
+      "title": "图灵发表《计算机器与智能》",
+      "date": "1950-10-01",
+      "description": "艾伦·图灵提出“机器能否思考”，并引入图灵测试作为智能评判标准。",
+      "category": "人工智能哲学基础",
+      "impact": "为人工智能领域引入智能判定的基本思想，奠定理论思考基础"
+    },
+    {
+      "id": "29bec685-df0f-80d4-a788-f518be2dfa23",
+      "title": "达特茅斯会议（AI诞生）",
+      "date": "1956-06-01",
+      "description": "约翰·麦卡锡等人首次提出“Artificial Intelligence”，标志着 AI 作为学科正式成立。",
+      "category": "人工智能学科起源",
+      "impact": "正式确立“人工智能”学科，开启该领域系统化研究"
+    },
+    {
+      "id": "29bec685-df0f-80fa-a7e7-ddf8cbe7bc04",
+      "title": "感知机模型提出",
+      "date": "1957-07-01",
+      "description": "Frank Rosenblatt 提出首个可训练的神经网络模型，用于二元分类。",
+      "category": "神经网络",
+      "impact": "开创神经网络研究先河，是深度学习早期探索成果"
+    },
+    {
+      "id": "29bec685-df0f-80d9-a98b-e04e63ab1c0f",
+      "title": "反向传播算法推广",
+      "date": "1986-10-01",
+      "description": "David Rumelhart 等人推广反向传播，使训练多层神经网络成为可能。",
+      "category": "神经网络",
+      "impact": "解决多层神经网络训练关键难题，推动深度学习发展"
+    },
+    {
+      "id": "29bec685-df0f-8086-936b-eeaf8219868e",
+      "title": "深蓝击败卡斯帕罗夫",
+      "date": "1997-05-11",
+      "description": "IBM 深蓝超级计算机击败国际象棋世界冠军 Garry Kasparov。",
+      "category": "人机博弈",
+      "impact": "实现人工智能在策略棋类游戏中对人类的首次胜利"
+    },
+    {
+      "id": "29bec685-df0f-807a-8351-fe3f9316e274",
+      "title": "AlexNet 图像识别夺冠",
+      "date": "2012-09-01",
+      "description": "AlexNet 在 ImageNet 比赛中大幅降低错误率，推动深度学习崛起。",
+      "category": "计算机视觉",
+      "impact": "助力深度学习在计算机视觉领域取得重大进展"
+    },
+    {
+      "id": "29bec685-df0f-8044-aa1d-e738b2d9ce7a",
+      "title": "AlphaGo 击败李世石",
+      "date": "2016-03-15",
+      "description": "DeepMind 的 AlphaGo 使用深度学习 + 强化学习击败围棋世界冠军。",
+      "category": "人机博弈",
+      "impact": "展现人工智能在复杂策略游戏中的卓越能力"
+    },
+    {
+      "id": "29bec685-df0f-80d5-9d51-d6d897094066",
+      "title": "Transformer 架构提出",
+      "date": "2017-06-12",
+      "description": "Google 提出基于自注意力的 Transformer，成为 NLP 和大模型基础。",
+      "category": "自然语言处理",
+      "impact": "为自然语言处理和大语言模型带来关键架构革新"
+    },
+    {
+      "id": "29bec685-df0f-8058-8c49-f0e3b98056c2",
+      "title": "GPT - 3 发布",
+      "date": "2020-05-28",
+      "description": "OpenAI 发布 GPT - 3，展示强大泛化能力，开启大模型时代。",
+      "category": "大语言模型",
+      "impact": "开启大语言模型广泛应用阶段，凸显强大泛化能力"
+    },
+    {
+      "id": "29bec685-df0f-8020-b70c-cfa987bb76f1",
+      "title": "ChatGPT 发布",
       "date": "2022-11-30",
-      "description": "1234456",
-      "category": "架构创新",
-      "impact": "太重要"
+      "description": "基于 GPT - 3.5 的对话模型，在预训练基础上加入指令微调与人类反馈强化学习，以强大交互能力引爆全球 AI 热潮。",
+      "category": "大语言模型",
+      "impact": "推动生成式人工智能普及，变革人机交互模式"
     },
     {
-      "id": "29aec685-df0f-807e-92b2-f61da15ce8c9",
-      "title": "",
-      "date": "",
-      "description": "",
-      "category": "",
-      "impact": ""
+      "id": "29bec685-df0f-80af-ad2a-e9ff209cfcdb",
+      "title": "Sora文生视频发布",
+      "date": "2024-02-15",
+      "description": "发布可生成约60秒长、具物理一致性的视频模型 Sora，推动“世界模拟”范式进入新阶段\n",
+      "category": "生成式AI",
+      "impact": "把生成式 AI 从语言、图像推进到物理世界模拟前沿，重塑视频创作与内容产业"
     },
     {
-      "id": "29aec685-df0f-80a1-9a4d-ca70ff07afbb",
-      "title": "",
-      "date": "",
-      "description": "",
-      "category": "",
-      "impact": ""
+      "id": "29bec685-df0f-8052-8f14-cf6d81858173",
+      "title": "GPT - 4o 发布",
+      "date": "2024-05-13",
+      "description": "OpenAI 推出原生多模态旗舰 GPT - 4o，语言 - 视觉 - 音频一体化能力显著增强。",
+      "category": "多模态",
+      "impact": "实现多模态一体化重要跃迁，提升人机交互与推理上限"
+    },
+    {
+      "id": "29bec685-df0f-806b-8476-eb9447d2a18b",
+      "title": "OpenAI o1 / o3 - mini发布",
+      "date": "2024-09-13",
+      "description": "首个专注复杂推理的 o1 系列首发，引入思维链强化学习，显著提升数学/代码/科学问答可靠性\n\n",
+      "category": "大语言模型",
+      "impact": "显著提升数学/代码/科学推理能力，推动 AI 从“快思考”走向“慢思考”的范式跃迁。"
+    },
+    {
+      "id": "29bec685-df0f-8041-85b9-c25416b68892",
+      "title": "DeepSeek - R1正式发布",
+      "date": "2025-01-20",
+      "description": "完整版DeepSeek-R1发布，开源模型权重（MIT协议），支持API调用，定价为OpenAI的1/27",
+      "category": "大语言模型",
+      "impact": "以低成本高性能冲击市场，引发全球关注。在技术社区和大众层面引发高热度，其影响已超越技术层面，成为中美科技博弈的关键变量。\n\n"
     }
   ],
-  "lastUpdated": "2025-10-29T06:45:25.075Z",
-  "count": 3
+  "lastUpdated": "2025-11-01T14:50:54.721Z",
+  "count": 14
 }
